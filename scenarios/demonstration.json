@@ -1,0 +1,22 @@
+{
+  "name": "demonstration",
+  "duration_s": 35.0,
+  "events": [
+    {"at_s": 0.4, "action": "reset", "value": true, "note": "Enable after startup checks"},
+    {"at_s": 0.6, "action": "reset", "value": false},
+    {"at_s": 4.0, "action": "pedestrian_zone", "value": "warning", "note": "PLC must reduce speed"},
+    {"at_s": 7.0, "action": "pedestrian_zone", "value": "protective", "note": "Walk deeper into the protective field"},
+    {"at_s": 11.5, "action": "pedestrian_zone", "value": "clear", "note": "Walk back to the safe aisle edge"},
+    {"at_s": 15.5, "action": "reset", "value": true, "note": "Manual reset after field clear and standstill"},
+    {"at_s": 15.7, "action": "reset", "value": false},
+    {"at_s": 18.0, "action": "estop", "value": true},
+    {"at_s": 20.0, "action": "estop", "value": false},
+    {"at_s": 21.0, "action": "reset", "value": true},
+    {"at_s": 21.2, "action": "reset", "value": false},
+    {"at_s": 25.0, "action": "communication_loss", "value": true, "note": "Freeze input heartbeat"},
+    {"at_s": 27.0, "action": "communication_loss", "value": false},
+    {"at_s": 28.0, "action": "reset", "value": true},
+    {"at_s": 28.2, "action": "reset", "value": false},
+    {"at_s": 32.0, "action": "scanner_failure", "value": true}
+  ]
+}

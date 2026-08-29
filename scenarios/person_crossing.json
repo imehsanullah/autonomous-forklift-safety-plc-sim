@@ -1,0 +1,11 @@
+{
+  "name": "person_crossing",
+  "duration_s": 14.0,
+  "events": [
+    {"at_s": 0.4, "action": "reset", "value": true},
+    {"at_s": 0.6, "action": "reset", "value": false},
+    {"at_s": 4.0, "action": "pedestrian_zone", "value": "warning"},
+    {"at_s": 7.0, "action": "pedestrian_zone", "value": "protective"},
+    {"at_s": 11.5, "action": "pedestrian_zone", "value": "clear"}
+  ]
+}

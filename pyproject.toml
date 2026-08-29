@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "forklift-safety-sim"
+version = "1.0.0"
+description = "Educational PyBullet and IEC 61131-3 autonomous forklift safety demonstrator"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+authors = [{ name = "Forklift Safety Demo Contributors" }]
+dependencies = [
+  "pymodbus>=3.11,<3.12",
+]
+
+[project.optional-dependencies]
+sim = [
+  "pybullet>=3.2.6; platform_system != 'Darwin' or platform_machine != 'arm64'",
+  "pybullet-arm64>=3.2.8; platform_system == 'Darwin' and platform_machine == 'arm64'",
+  "pillow>=11.0",
+]
+dev = [
+  "ruff>=0.6",
+]
+
+[project.scripts]
+forklift-sim = "forklift_safety.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/forklift_safety"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

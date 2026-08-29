@@ -1,0 +1,13 @@
+{
+  "name": "fault_showcase",
+  "duration_s": 11.0,
+  "events": [
+    {"at_s": 0.4, "action": "reset", "value": true},
+    {"at_s": 0.6, "action": "reset", "value": false},
+    {"at_s": 3.0, "action": "estop", "value": true},
+    {"at_s": 5.0, "action": "estop", "value": false},
+    {"at_s": 6.0, "action": "reset", "value": true},
+    {"at_s": 6.2, "action": "reset", "value": false},
+    {"at_s": 8.5, "action": "scanner_failure", "value": true}
+  ]
+}

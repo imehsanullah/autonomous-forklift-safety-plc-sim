@@ -1,0 +1,12 @@
+{
+  "name": "protective_stop",
+  "duration_s": 14.0,
+  "events": [
+    {"at_s": 0.3, "action": "reset", "value": true},
+    {"at_s": 0.5, "action": "reset", "value": false},
+    {"at_s": 2.0, "action": "pedestrian_zone", "value": "protective"},
+    {"at_s": 7.0, "action": "pedestrian_zone", "value": "clear"},
+    {"at_s": 11.0, "action": "reset", "value": true},
+    {"at_s": 11.2, "action": "reset", "value": false}
+  ]
+}

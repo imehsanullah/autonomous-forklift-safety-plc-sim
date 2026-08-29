@@ -1,0 +1,11 @@
+{
+  "name": "drive_failure",
+  "duration_s": 8.0,
+  "events": [
+    {"at_s": 0.3, "action": "reset", "value": true},
+    {"at_s": 2.0, "action": "drive_failure", "value": true, "note": "PLC latches drive fault"},
+    {"at_s": 4.0, "action": "drive_failure", "value": false},
+    {"at_s": 5.0, "action": "reset", "value": true, "note": "Restart only after standstill"}
+  ]
+}
+

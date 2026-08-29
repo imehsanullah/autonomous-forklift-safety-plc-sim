@@ -1,0 +1,11 @@
+{
+  "name": "communication_loss",
+  "duration_s": 9.0,
+  "events": [
+    {"at_s": 0.3, "action": "reset", "value": true},
+    {"at_s": 2.0, "action": "communication_loss", "value": true, "note": "Heartbeat input freezes"},
+    {"at_s": 4.0, "action": "communication_loss", "value": false},
+    {"at_s": 5.0, "action": "reset", "value": true, "note": "Restart after communication recovery"}
+  ]
+}
+
